@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" sizes="32x32" href="pimg.png">
+  
+  <title>DevShop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Poppins:wght@200;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="BigP" >
+    <div class="card_product">
+      <img class="close" onclick="bigP(0)" src="icon-close.svg" alt="">
+      <div class="navImg1">
+        <img onclick="imgUpdte(5)" id="preImg" src="icon-previous.svg" alt="">
+        <img onclick="imgUpdte(6)" id="nexImg" src="icon-next.svg" alt="">
+      </div>
+      <img id="imgMain" src="image-product-1.jpg" width="500px" alt="">
+          <div class="card_body">
+            <img onclick="imgUpdte(0)" src="image-product-1-thumbnail.jpg" width="70px" alt=""></li>
+            <img  onclick="imgUpdte(1)" src="image-product-2-thumbnail.jpg" width="70px" alt=""></li>
+            <img onclick="imgUpdte(2)" src="image-product-3-thumbnail.jpg" width="70px" alt=""></li>
+            <img onclick="imgUpdte(3)" src="image-product-4-thumbnail.jpg" width="70px" alt=""></li>
+            </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+  <nav id="nav1" class="navbar navbar-expand-lg navbar-light bg light">
+    <button class="navbar-toggler" type=" button" data-toggle="collapse" data-target="#navItem">
+      <img src="icon-menu.svg" alt="">
+    </button>
+    <a class="navbarTitel ml-4 "> Sneakers</a>
+    <div class="collapse navbar-collapse" id="navItem">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="" class="nav-link">Collections</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">Man</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">Women</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div  onclick="cartIc()" class="profile ml-auto"> 
+      <div>
+        <span id="noItemsDis">0</span>
+      </div>
+      <img  src="icon-cart.svg" alt="" id="cartIc">
+      <img src="pimg.png" width="40px" class="ml-4" alt="" id="cartIc">
+     </div>
+  </nav>
+  <div class="cart_item">
+    <div class="cI">
+      <b>Cart</b>
+      <hr>
+      <ul class="list-unstyled ">
+        <li class="lishow">
+          <div class="li_item">
+            <img src="image-product-1-thumbnail.jpg" width="50px" alt="">
+            <div class="liDe">
+              <p>Fall Sneakers</p>
+            <small>$125 x <small id="totalitem">0</small><label id="toTal"></label></small>
+            </div>
+            <img onclick="cartAdd(0)" id="deleTe" src="icon-delete.svg" alt="">
+          </div>
+          <button>Checkout</button>
+        </li>
+      </ul>
+      <span class="CMt">Cart is empty</span>
+    </div>
+  </div>
+  <hr>
+    <div class="row ">
+      <div class="col-md-6 ">
+        <div class="card_product">
+          <div class="navImg">
+            <img onclick="imgUpdte(5)" id="preImg1" src="icon-previous.svg" alt="">
+            <img onclick="imgUpdte(6)" id="nexImg1" src="icon-next.svg" alt="">
+          </div>
+          <img id="imgMain1" onclick="bigP()" src="image-product-1.jpg" width="350px" alt="">
+          <div class="card_body">
+            <img onclick="imgUpdte(0)" src="image-product-1-thumbnail.jpg" width="70px" alt=""></li>
+            <img  onclick="imgUpdte(1)" src="image-product-2-thumbnail.jpg" width="70px" alt=""></li>
+            <img onclick="imgUpdte(2)" src="image-product-3-thumbnail.jpg" width="70px" alt=""></li>
+            <img onclick="imgUpdte(3)" src="image-product-4-thumbnail.jpg" width="70px" alt=""></li>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="content1 my-5">
+          <b> Sneaker Company</b>
+          <h2>Fall Limited Edition <br> Sneakers</h2>
+          <p>These low-profile sneakers are your perfect casual <br> wear companion. Featuring a 
+            durable rubber outer sole, <br> they’ll withstand everything the weather can offer.</p>
+            <span>  $125.00 <small>50%</small> </span><br>
+            <del>  $250.00</del>
+            <div class="cart">
+              <div class="cartAdd">
+                <img onclick="itemsAdd(0)" src="icon-minus.svg" alt="">
+                <b id="noItems">0</b>
+                <img onclick="itemsAdd(1)" src="icon-plus.svg" alt="">
+              </div>
+              <button onclick="cartAdd(1)" id="addCartBtn">
+                <img src="vector.svg" alt="">
+                Add to cart
+              </button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
